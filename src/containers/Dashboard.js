@@ -1,14 +1,11 @@
 import { connect } from 'react-redux';
-import Dashboard from '../components/Car';
+import Dashboard from '../components/Dashboard';
 
 const mapStateToProps = (state) => {
-
-    const props = {
-        cars: state.cars,
-        user: state.user
-    };
-
-    return props;
+    return {
+        user: state.user,
+        cars: state.cars
+    }
 }
 
 export default connect(mapStateToProps)(Dashboard);
